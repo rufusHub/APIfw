@@ -54,4 +54,32 @@ public class HTTPMethods {
 		System.out.println(res.asString());
 	}
 	
+	public Response putMethod(String jsonBody, String uriKeyName, String endPoint) {
+		String uriValue = pr.getProperty(uriKeyName) + "/" + endPoint;
+		Response res =
+		given()
+		.contentType(ContentType.JSON)
+		.body(jsonBody)
+		.when()
+		.put(uriValue);
+		
+		System.out.println("Status code is " + res.statusCode());
+		System.out.println("Response data is: ");
+		System.out.println(res.asString());
+		return res;
+	}
+	
+	public void deleteMethod(String uriKeyName, String endPointValue) {
+		String uriValue = pr.getProperty(uriKeyName) + "/" + endPointValue;
+		Response res =
+		given()
+		.contentType(ContentType.JSON)
+		.when()
+		.delete(uriValue);
+		
+		System.out.println("Status code is " + res.statusCode());
+		System.out.println("Response data is: ");
+		System.out.println(res.asString());
+	}
+	
 }
