@@ -1,19 +1,20 @@
 package org.testing.testScripts;
 
+import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.Properties;
-import java.util.Scanner;
-
 import org.testing.testSteps.HTTPMethods;
 import org.testing.utilities.JsonHandle;
-import org.testing.utilities.JsonParsing;
 import org.testing.utilities.JsonReplacement;
 import org.testing.utilities.PropertiesHandle;
+
 
 import io.restassured.response.Response;
 
 public class TC4_PutRequest {
 
+
+	@Test
 	public void testCase4() throws IOException {
 		
 		Properties p = PropertiesHandle.loadProperties("..//APIMarchFW/URI.properties");

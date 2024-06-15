@@ -24,7 +24,7 @@ public class HTTPMethods {
 		.when()
 		.post(uriValue);
 		
-		System.out.println("Status code is " + res.statusCode());
+		System.out.println("'postMethod' Status code is " + res.statusCode());
 		return res;
 	}
 	
@@ -36,12 +36,12 @@ public class HTTPMethods {
 		.when()
 		.get(uriValue);
 		
-		System.out.println("Status code is " + res.statusCode());
+		System.out.println("'getAlltMethod'Status code is " + res.statusCode());
 		System.out.println("Response data is: ");
 		System.out.println(res.asString());
 	}
 	
-	public void getParticulartMethod(String uriKeyName, String endPointValue) {
+	public Response getParticulartMethod(String uriKeyName, String endPointValue) {
 		String uriValue = pr.getProperty(uriKeyName) + "/" + endPointValue;
 		Response res =
 		given()
@@ -49,9 +49,10 @@ public class HTTPMethods {
 		.when()
 		.get(uriValue);
 		
-		System.out.println("Status code is " + res.statusCode());
+		System.out.println("'getParticulartMethod'Status code is " + res.statusCode());
 		System.out.println("Response data is: ");
 		System.out.println(res.asString());
+		return res;
 	}
 	
 	public Response putMethod(String jsonBody, String uriKeyName, String endPoint) {
@@ -63,7 +64,7 @@ public class HTTPMethods {
 		.when()
 		.put(uriValue);
 		
-		System.out.println("Status code is " + res.statusCode());
+		System.out.println("'putMethod' Status code is " + res.statusCode());
 		System.out.println("Response data is: ");
 		System.out.println(res.asString());
 		return res;
@@ -77,7 +78,7 @@ public class HTTPMethods {
 		.when()
 		.delete(uriValue);
 		
-		System.out.println("Status code is " + res.statusCode());
+		System.out.println("'deleteMethod' Status code is " + res.statusCode());
 		System.out.println("Response data is: ");
 		System.out.println(res.asString());
 	}

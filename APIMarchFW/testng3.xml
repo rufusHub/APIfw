@@ -1,0 +1,17 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Component Tests" verbose="2" annotations="JDK">
+	<test name ="2-run" preserve-order="true">
+		<classes>
+			<class name="org.testing.testScripts.TC1_Post_restapiexample"></class>
+			<class name="org.testing.testScripts.TC2_GetAll_restapiexample"></class>
+		</classes>
+	</test>
+	<test name="2-wait" preserve-order="true">
+		<classes>
+			<class name="org.testing.testScripts.TC5_Delete_restapiexample"></class>
+			<class name="org.testing.testScripts.TC4_Put_restapiexample"></class>
+			<class name="org.testing.testScripts.TC3_GetParticular_restapiexample"></class>
+		</classes>
+	</test>
+</suite>

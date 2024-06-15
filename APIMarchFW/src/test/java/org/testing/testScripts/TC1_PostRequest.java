@@ -1,5 +1,6 @@
 package org.testing.testScripts;
 
+import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.Scanner;
@@ -15,6 +16,8 @@ import io.restassured.response.Response;
 public class TC1_PostRequest {
 	
 	public static String returnIdValue;
+	
+	@Test
 	public void testCase1() throws IOException {
 		
 		Properties p = PropertiesHandle.loadProperties("..//APIMarchFW/URI.properties");

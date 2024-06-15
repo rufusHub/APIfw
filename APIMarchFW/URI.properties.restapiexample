@@ -1,0 +1,5 @@
+RAE_POST_URI: https://dummy.restapiexample.com/api/v1/create
+RAE_GET_URI: https://dummy.restapiexample.com/api/v1/employees
+RAE_GETp_URI: https://dummy.restapiexample.com/api/v1/employee
+RAE_UPDATE_URI: https://dummy.restapiexample.com/api/v1/update
+RAE_DELETE_URI: https://dummy.restapiexample.com/api/v1/delete
