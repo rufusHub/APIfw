@@ -2,6 +2,7 @@ package org.testing.testSteps;
 
 import static io.restassured.RestAssured.*;
 
+import java.util.HashMap;
 import java.util.Properties;
 
 import io.restassured.http.ContentType;
@@ -16,10 +17,18 @@ public class HTTPMethods {
 	}
 	
 	public Response postMethod(String jsonBody, String uriKeyName) {
+		
+//		HashMap<String, String> hm = new HashMap<String, String>();
+//		hm.put("first", "value1");
+		
+		
 		String uriValue = pr.getProperty(uriKeyName);
 		Response res =
 		given()
 		.contentType(ContentType.JSON)
+//		.header(headerName, headerValue)
+//		.cookie(cookieName, cookieValue)
+//		.cookies(hm)
 		.body(jsonBody)
 		.when()
 		.post(uriValue);
@@ -28,7 +37,7 @@ public class HTTPMethods {
 		return res;
 	}
 	
-	public void getAlltMethod(String uriKeyName) {
+	public Response getAlltMethod(String uriKeyName) {
 		String uriValue = pr.getProperty(uriKeyName);
 		Response res =
 		given()
@@ -39,6 +48,7 @@ public class HTTPMethods {
 		System.out.println("'getAlltMethod'Status code is " + res.statusCode());
 		System.out.println("Response data is: ");
 		System.out.println(res.asString());
+		return res;
 	}
 	
 	public Response getParticulartMethod(String uriKeyName, String endPointValue) {

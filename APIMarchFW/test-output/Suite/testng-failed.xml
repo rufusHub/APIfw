@@ -8,11 +8,6 @@
           <include name="testCase1"/>
         </methods>
       </class> <!-- org.testing.testScripts.TC1_PostRequest_randomNum -->
-      <class name="org.testing.testScripts.TC3_GetParticular_randomNum">
-        <methods>
-          <include name="testCase3"/>
-        </methods>
-      </class> <!-- org.testing.testScripts.TC3_GetParticular_randomNum -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
